@@ -1,11 +1,15 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    try:
-        import hidden_4
+    import hidden_4
 
-        names = dir(hidden_4)
-        for name in names:
-            if not name.startswith("__"):
-                print(name)
-    except ImportError:
-        pass
+    # Get all names defined in the module
+    names = dir(hidden_4)
+
+    # Sort the names alphabetically
+    names.sort()
+
+    # Print names that do not start with "__"
+    for name in names:
+        if name[:2] != "__":
+            print("{}".format(name))
+            
