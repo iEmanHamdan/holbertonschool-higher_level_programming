@@ -1,0 +1,65 @@
+========================================
+The ``2-matrix_divided`` Testing Module
+========================================
+
+This module provides test validation cases for the `matrix_divided` function.
+The function divides all numerical elements of a matrix by a given value.
+
+Using the Function
+------------------
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Basic Matrix Division Matrix:
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Confirming the Original Matrix Remained Intact:
+    >>> matrix
+    [[1, 2, 3], [4, 5, 6]]
+
+Floating Point Division and Negative Handling:
+    >>> matrix_divided([[10.5, -20.0]], 2.5)
+    [[4.2, -8.0]]
+
+Exception Handling - Row Size Discrepancies:
+    >>> matrix_divided([[1, 2], [3, 4, 5]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+
+Exception Handling - Non-numeric Elements in Matrix:
+    >>> matrix_divided([[1, 2], [3, "four"]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Exception Handling - Non-matrix Structure Passed:
+    >>> matrix_divided([1, 2, 3], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Exception Handling - Empty Matrix or Empty Inner Rows:
+    >>> matrix_divided([[]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Exception Handling - Division Parameter Type Checking:
+    >>> matrix_divided([[1, 2], [3, 4]], "two")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+Exception Handling - Division Parameter set to Zero:
+    >>> matrix_divided([[1, 2], [3, 4]], 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+Exception Handling - Division Parameter set to NaN:
+    >>> matrix_divided([[1, 2], [3, 4]], float('nan'))
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
