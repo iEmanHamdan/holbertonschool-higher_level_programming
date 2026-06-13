@@ -1,0 +1,60 @@
+=====================================
+The ``4-print_square`` Testing Module
+=====================================
+
+This module provides test validation cases for the `print_square` function.
+The function prints a square grid composed of '#' characters based on size.
+
+Using the Function
+------------------
+    >>> print_square = __import__('4-print_square').print_square
+
+Standard Usage (Size 4):
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Standard Usage (Size 1):
+    >>> print_square(1)
+    #
+
+Standard Usage (Size 0):
+    >>> print_square(0)
+
+Exception Handling - Negative Integer:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+Exception Handling - Invalid Type String:
+    >>> print_square("School")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Exception Handling - Invalid Type List:
+    >>> print_square([4])
+    Traceback (which most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Exception Handling - Positive Float:
+    >>> print_square(4.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Exception Handling - Negative Float:
+    >>> print_square(-4.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Exception Handling - Missing Required Position Argument:
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
