@@ -37,7 +37,7 @@ Exception Handling - Invalid Type String:
 
 Exception Handling - Invalid Type List:
     >>> print_square([4])
-    Traceback (which most recent call last):
+    Traceback (most recent call last):
     ...
     TypeError: size must be an integer
 
