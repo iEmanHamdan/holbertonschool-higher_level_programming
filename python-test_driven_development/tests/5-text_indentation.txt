@@ -1,0 +1,40 @@
+========================================
+The ``5-text_indentation`` Testing Module
+========================================
+
+This module provides test validation cases for the `text_indentation` function.
+The function splits strings smoothly at selected punctuation marks.
+
+Using the Function
+------------------
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Standard Matrix Usage:
+    >>> text_indentation("Hello. World? Testing: Done")
+    Hello.
+    <BLANKLINE>
+    World?
+    <BLANKLINE>
+    Testing:
+    <BLANKLINE>
+    Done
+
+Handling leading and trailing white spaces after line splits:
+    >>> text_indentation("  Word.    Another sentence?   ")
+    Word.
+    <BLANKLINE>
+    Another sentence?
+    <BLANKLINE>
+
+No Punctuation Found:
+    >>> text_indentation("Just a normal string with no punctuation marks")
+    Just a normal string with no punctuation marks
+
+Empty String Input Handling:
+    >>> text_indentation("")
+
+Exception Handling - Invalid Parameter Type:
+    >>> text_indentation(12345)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
