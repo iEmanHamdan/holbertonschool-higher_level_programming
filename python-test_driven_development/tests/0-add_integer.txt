@@ -1,0 +1,49 @@
+=====================================
+The ``0-add_integer`` Testing Module
+=====================================
+
+This module provides comprehensive test coverage for the `add_integer` function.
+The function calculates the sum of two numbers after validating and casting.
+
+Using the Function
+------------------
+Import the function to use it:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Basic Behavior Matrix:
+    >>> add_integer(1, 2)
+    3
+    >>> add_integer(100, -2)
+    98
+    >>> add_integer(2)
+    100
+
+Floating Point Casting Logic:
+    >>> add_integer(100.3, -2)
+    98
+    >>> add_integer(2.9, 3.1)
+    5
+
+Type Exception Handling (Invalid Parameter a):
+    >>> add_integer("School", 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Type Exception Handling (Invalid Parameter b):
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Type Exception Handling (Passing None):
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Type Exception Handling (Passing Infinity or NaN):
+    >>> add_integer(float('inf'), 4)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
