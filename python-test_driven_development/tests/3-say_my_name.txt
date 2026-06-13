@@ -1,0 +1,40 @@
+=======================================
+The ``3-say_my_name`` Testing Module
+=======================================
+
+This module provides test validation cases for the `say_my_name` function.
+The function cleanly prints a full name message string.
+
+Using the Function
+------------------
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Standard Usage (Both Parameters Provided):
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+Omitting the Optional Last Name Parameter:
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+Empty Strings Input Handling:
+    >>> say_my_name("", "")
+    My name is  
+
+Exception Handling - Invalid Type for first_name:
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Exception Handling - Invalid Type for last_name:
+    >>> say_my_name("Walter", [1, 2, 3])
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+Exception Handling - Passing None as input values:
+    >>> say_my_name(None, "Smith")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
