@@ -25,7 +25,7 @@ def text_indentation(text):
     for char in text:
         if skip_spaces and char == ' ':
             continue
-        
+
         skip_spaces = False
         print(char, end="")
 
