@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This module provides a function to calculate the weighted average
+of an integer tuple list.
+"""
 
 
 def weight_average(my_list=[]):
@@ -14,3 +18,4 @@ def weight_average(my_list=[]):
         total_weight += weight
 
     return total_score / total_weight
+    
