@@ -52,8 +52,4 @@ class Rectangle:
         """Returns string representation using # characters."""
         if self.__width == 0 or self.__height == 0:
             return ""
-<<<<<<< HEAD
         return "\n".join(["#" * self.__width] * self.__height)
-=======
-    return "\n".join(["#" * self.__width] * self.__height)
->>>>>>> refs/remotes/origin/main
