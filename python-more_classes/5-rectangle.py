@@ -60,4 +60,8 @@ class Rectangle:
 
     def __del__(self):
         """Prints message when instance is deleted."""
+<<<<<<< HEAD
         print("Bye rectangle...")
+=======
+    print("Bye rectangle...")
+>>>>>>> refs/remotes/origin/main

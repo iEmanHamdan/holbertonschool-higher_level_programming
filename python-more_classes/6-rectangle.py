@@ -64,4 +64,8 @@ class Rectangle:
     def __del__(self):
         """Prints message and decrements counter when instance is deleted."""
         Rectangle.number_of_instances -= 1
+<<<<<<< HEAD
         print("Bye rectangle...")
+=======
+    print("Bye rectangle...")
+>>>>>>> refs/remotes/origin/main
