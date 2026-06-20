@@ -90,3 +90,4 @@ class Rectangle:
             Rectangle: A new square Rectangle instance.
         """
         return cls(size, size)
+        
