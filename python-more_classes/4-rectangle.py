@@ -56,8 +56,4 @@ class Rectangle:
 
     def __repr__(self):
         """Returns official string representation for eval recreation."""
-<<<<<<< HEAD
         return "Rectangle({}, {})".format(self.__width, self.__height)
-=======
-    return "Rectangle({}, {})".format(self.__width, self.__height)
->>>>>>> refs/remotes/origin/main
